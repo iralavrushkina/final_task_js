@@ -1,0 +1,18 @@
+.bag {
+  background-color: pink;
+  width: 300px;
+  height: 100vh;
+}
+.bag__btnClose {
+  width: 15px;
+  height: 15px;
+  background: none;
+  border: none;
+  position: relative;
+}
+.bag__btnClose:after, .bag__btnClose:before {
+  content: "";
+  width: 3px;
+  height: 15px;
+  position: absolute;
+}

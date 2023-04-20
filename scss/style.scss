@@ -1,0 +1,220 @@
+@import "varMix.scss";
+@import "reset.scss";
+@import "about.scss";
+@import "products.scss";
+@import "bag.scss";
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.top{
+    width: 100%;
+    min-height: 728px;
+    padding: 0 180px;
+    margin: 0 0 60px;
+    &__header{
+        width: 100%;
+        min-height: 80px;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav{
+        display: flex;
+    }
+    &__nav_item{
+        display: inline-block;
+        margin: 0 32px 0 0;
+        text-decoration: none;
+        font-size: 18px;
+        transition: text-decoration 1s;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__logo{
+        font-family: 'Kaushan Script';
+        flex: 0 0 350px;
+        display: inline-block;
+        text-decoration: none;
+        font-style: italic;
+        font-size: 46px; 
+    }
+    &__bag{
+        @extend .btn-bgr-border;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.5s;
+        &:hover{
+            transform: scale(1.2);
+            transform: scale(1.2);
+            transform: scale(1.2);
+        }
+    }
+    &__counter{
+        padding: 3px;
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background-color: $red;
+        color: $white;
+        border-radius: 50%;
+        top: -8px;
+        right: -12px;
+    }
+    &__title{
+        font-family: 'Kaushan Script';
+        font-style: italic;
+        font-size: 62px;
+        margin: 150px 0 20px;
+        font-weight: 600;
+    }
+    &__subtitle{
+        font-size: 32px;
+        margin: 0 0 20px;
+    }
+    &__btn_show{
+        background: none;
+        padding: 5px;
+        width: 100px;
+        height: 30px;
+        border: 1px solid $white;
+        border-radius: 2px;
+        transition: transform 0.5s;
+        transition: box-shadow 0.5s;
+        & a{
+            text-decoration: none;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        &:hover{
+            box-shadow:
+                1px 1px $white,
+                2px 2px $white,
+                3px 3px $white;
+            transform: translateX(-7px);
+            transform: translateX(-7px);
+
+        }
+    }
+}
+.white-section{
+    padding: 0 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 0 50px;
+    }
+    &__slash{
+        color: $red;
+        font-size: 24px;
+        margin: 0 9px 0;
+    }
+    &__goods{
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center; 
+    }
+    &__btn_all{
+        @include blockSize(120px,30px);
+        background: $red;
+        padding: 5px;
+        margin: 30px 0;
+        border: none;
+        border-radius: 2px;
+        transition: opacity 0.5s;
+        & a{
+            text-decoration: none;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        &:hover{
+            opacity: 50%;
+        }
+    }
+    
+}
+.goods{
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    width: 100%;
+    &__card{
+        margin: 0 0 20px;
+    }
+}
+.goods-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 265px;
+    min-height: 200px;
+    margin: 0 10px 0 ;
+    &__photo{
+       width: 100%;
+       height: 142px;
+       border-radius: 5px;
+       margin: 0 0 12px;
+    }
+    &__title{
+        color:$d_blue;
+        margin: 0 0 9px;
+        font-size: 15px;
+    }
+    &__price{
+        font-size: 18px; 
+        font-weight: 600;
+        margin: 0 0 9px;
+    }
+    &__btn_buy {
+        @include blockSize(100px,30px)
+    }
+}
+.color-white{
+    color: $white;
+}
+.color-black{
+    color: #000;
+}
+.bkg-top{
+  background-color: rgba(161, 102, 9, 0.264);
+}
+.padding{
+    padding: 0 180px;
+}
+.hide{
+    display: none;
+}
+.bag-active{
+    display: flex;
+}
+.btn-red{
+    background: $red;
+    padding: 5px;
+    margin: 0 0 30px;
+    border: none;
+    border-radius: 2px;
+    color: $white;
+    text-transform: uppercase;
+    transition: opacity 0.5s;
+    &:hover{
+        opacity: 50%;
+    }
+
+}
+.opacity{
+    opacity: 60%;
+}
+

@@ -1,0 +1,46 @@
+.main-products{
+    display: flex;
+    &__sidebar{
+        min-width: 175px;
+        margin: 0 24px 0 0;
+    }
+    &__serch-input{
+        border: none;
+        width: 100%;
+        border-radius: 5px;;
+        background-color: $l_blue;
+        padding: 10px;
+        font-size: 15px;
+        margin: 0 0 25px;
+    }
+    &__title{
+        font-weight: 600;
+        margin: 0 0 15px;
+        font-size: 15px;
+    }
+    &__filter{
+        margin: 0 0 30px;
+    }
+    &__counter{
+        font-size: 14px;
+        font-size: 500;
+        color: $red;
+    }
+    &__filter-item{
+        display: block;
+        margin: 0 0 15px;
+        font-size: 16px;
+        color: $d_blue;
+    }
+    &__range-label{
+        display: block;
+        font-weight: 600;
+        margin: 0 0 10px;
+        font-size: 15px;
+    }
+    &__value{
+        color: $d_blue;
+        margin: 10px 0 10px;
+        font-size: 15px;
+    }
+}

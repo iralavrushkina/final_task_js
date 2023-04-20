@@ -1,0 +1,15 @@
+$d_blue:#557a90;
+$l_blue: #f3f6f8;
+$red: #b04b03;
+$white: #fff;
+
+.btn-bgr-border{
+    background: none;
+    border: none;
+}
+
+
+@mixin blockSize($w,$h){
+    width: $w;
+    height: $h;
+}

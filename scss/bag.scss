@@ -1,0 +1,164 @@
+.bag{
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 380px;
+    min-height: 100%;
+    background-color: $white;
+    padding: 10px 15px;
+    transition: opacity 0.5s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &__btn_close{
+        @extend .btn-bgr-border;
+        @include blockSize(25px,25px);
+        position: relative;
+        margin: 0 0 10px;
+        &:after, 
+        &:before{
+            content: "";
+            @include blockSize(5px,25px);
+            position: absolute;
+            background-color: $d_blue;
+            border-radius: 2px;
+        }
+        &:after{
+            top:0;
+            rotate: 45deg;
+        }
+        &:before{
+            top:0;
+            rotate: -45deg;
+        }
+        &:hover{
+            opacity: 50%;
+        }
+    }
+    &__main{
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title,
+    &__total{
+        font-family: 'Kaushan Script';
+        font-size: 27px;
+        font-weight: 500;
+        margin: 0 0 30px;
+        text-align: center;  
+    }   
+    &__info{
+        display: flex;
+        padding: 0 30px 0 0;
+        overflow: hidden;
+        word-break: break-all;
+    }
+    &__good-card{
+        margin: 0 0 20px;
+        display: flex;
+        justify-content: space-between
+    }
+    &__photo{
+        @include blockSize(80px,60px);
+        display: inline-block;
+        border-radius: 3px;
+        margin: 0 25px 0 0;
+    }
+    &__name{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__price{
+        font-size: 12px;
+    }
+    &__btn_remove,
+    &__btn_clear{
+        @extend .btn-bgr-border;
+        display: block;
+        padding: 0;
+        color: $d_blue;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 10px 0 0;
+        transition: opacity 0.5s;
+        &:hover{
+            opacity: 50%;
+        }
+    }
+    &__btn_clear{
+        font-size: 16px;
+        margin: 30px 0;
+        align-self: center;
+        
+    }
+    &__counter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__arrow_up,
+    &__arrow_down{
+        @extend .btn-bgr-border;
+        @include blockSize(2px,10px);
+        position: relative;
+        transition: opacity 0.5s;
+        &:after,
+        &:before{
+            content: "";
+            @include blockSize(2px,10px); 
+            background-color: $red;
+            position: absolute;
+            border-radius: 1px;
+            cursor: pointer; 
+        }
+        &:hover{
+            opacity: 60%;
+        }
+    }
+    &__arrow_up{
+        margin: 0 0 10px;
+        &:after{
+            top:0;
+            left: 1px;
+            rotate: 45deg;
+        }
+        &:before{
+            top: 0;
+            right:2px;
+            rotate: -45deg;
+        }
+    }
+    &__arrow_down{
+        margin: 10px 0 0;
+        &:after{
+            bottom:0;
+            left: 1px;
+            rotate: -45deg;
+        }
+        &:before{
+            bottom: 0;
+            right: 2px;
+            rotate: 45deg;
+        }
+    }
+    &__counter_value{
+        @include blockSize(27px,20px);
+        text-align: center;
+        padding: 5px;
+        font-size: 16px;
+    }
+    &__footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+    &__colon{
+        margin: 0 10px;
+    } 
+    &__btn_check{
+        @include blockSize(240px,30px);
+    }
+}
+
